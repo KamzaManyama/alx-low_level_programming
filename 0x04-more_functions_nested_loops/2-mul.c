@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * mul - checks for lowercase letters
@@ -8,7 +9,7 @@
  */
 int mul(int a, int b)
 {
-	int result = a + b;
+	int result = a * b;
 
 	return (result);
 }
