@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _atold - prints half of a string
+ * _atoi - prints half of a string
  * @s: the string to print
  * Return: An integer
  */
