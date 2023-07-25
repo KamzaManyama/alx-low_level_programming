@@ -3,7 +3,7 @@
 
 /**
  * puts2 - prints half of a string
- * @dest: the string to print
+ * @str: the string to print
  * Return: void
  */
 void puts2(char *str)
