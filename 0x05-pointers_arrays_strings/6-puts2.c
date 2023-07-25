@@ -1,22 +1,21 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * puts2 - prints every other characrer
- * @str: the string to be treat
- * Resturn: void
+ * puts2 - prints half of a string
+ * @dest: the string to print
+ * Return: void
  */
 void puts2(char *str)
 {
 	int i;
-	int j = 0;
 
-	while (str[j] != '\n')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		j++;
+		if (i % 2 == 0)
+		{
+			printf("str[i]");
+		}
+		printf("\n");
 	}
-	for (i = 0; i < j; i += 2)
-	{
-		_putchar(str[i]);
-	}
-	_putchar('\n');
 }
