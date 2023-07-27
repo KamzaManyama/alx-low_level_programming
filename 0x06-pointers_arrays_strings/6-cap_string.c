@@ -1,40 +1,37 @@
-#include<stdio.h>
+#include "main.h"
 
 /**
- * upper - a function ...
- * @c: the caractere
- *
- * Return: 1 or 0.
+ * cap_string - reverse a arrau
+ * @str: array
+ * Return: void
  */
-
-char	upper(char c)
+char *cap_string(char *str)
 {
-	char	car;
+	int index = 0;
 
-	if (c >= 'a' && c <= 'z')
-		car = c + 'A' - 'a';
-	else
-		car = c;
-	return (car);
-}
-
-/**
- * cap_string - a function ...
- * @str: the chaine of caractere
- *
- * Return: str
- */
-
-char	*cap_string(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
+	while (str[index])
 	{
-		str[i] = upper(str[i]);
-		i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+		{
+			if (str[index - 1] == ' ' ||
+			str[index - 1] == '\t' ||
+			str[index - 1] == '\n' ||
+			str[index - 1] == ',' ||
+			str[index - 1] == ';' ||
+			str[index - 1] == '.' ||
+			str[index - 1] == '!' ||
+			str[index - 1] == '?' ||
+			str[index - 1] == '*' ||
+			str[index - 1] == '(' ||
+			str[index - 1] == ')' ||
+			str[index - 1] == '(' ||
+			str[index - 1] == ')' ||
+			index == 0)
+			{
+				str[index] -= 32;
+			}
+			index++;
+		}
 	}
 	return (str);
 }
-
