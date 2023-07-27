@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- * _strncat - a function ...
- * @dest: the chaine
- * @src: the chaine
- * @n: the number
- *
- * Return: 1 or 0
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
+ * Return: void
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = 0;
-	j = 0;
-	while (dest[i])
+	while (dest[i] != '\0')
+	{
 		i++;
-	while (src[j] && j < n)
+	}
+	j = 0;
+	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i] = '\n';
 	return (dest);
 }
