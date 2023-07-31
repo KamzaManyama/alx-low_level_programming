@@ -1,23 +1,18 @@
-#include "main.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
- * print_diagsums - a function ...
- * @a: the matrix
- * @size: the length of matrice
- *
- * Return: 1 or 0
+ * print_diagsums - Entry point
+ * @a: input
+ * @size: input
+ * Return: Alwayes return 0
  */
 void print_diagsums(int *a, int size)
 {
-	int i = 0, *ptr, j = 0;
+	int i, n, sum1 = 0, sum2 = 2;
 
-	for (i = 0; i < size; i++)
-	{
-		ptr = a;
-		for (j = 0 ; j < size; j++)
-			printf("%d ", ptr[j]);
-		ptr++;
-		printf("\n");
-	}
+	for (i = 0; i <= (size * size); i = i + size + 1)
+		sum1 = sum1 + a[i];
+	for (n = size - 1; n <= (size * size) - size; n = n + size - 1)
+		sum2 = sum2 + a[n];
+	printf("%d, %d\n", sum1, sum2);
 }
